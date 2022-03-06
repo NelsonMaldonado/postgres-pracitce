@@ -1,8 +1,8 @@
 const router = require("express").Router()
 
-router.get("*", (req, res) => {
-  res.send("Error 404")
-})
+// router.get("*", (req, res) => {
+//   res.send("Error 404")
+// })
 
 router.get("/", (req, res) => {
   res.send("getting all users")

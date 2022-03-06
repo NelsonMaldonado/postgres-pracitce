@@ -4,7 +4,7 @@ const Step = require("./catalog-model")
 // router.get("*", (req, res) => {
 //   res.send("Error 404")
 // })
-
+//this is an empty space
 router.get("/", async (req, res, next) => {
   console.log("getting all users")
   try {

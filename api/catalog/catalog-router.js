@@ -1,11 +1,18 @@
 const router = require("express").Router()
+const Step = require("./catalog-model")
 
 // router.get("*", (req, res) => {
 //   res.send("Error 404")
 // })
 
-router.get("/", (req, res) => {
-  res.send("getting all users")
+router.get("/", async (req, res, next) => {
+  console.log("getting all users")
+  try {
+    const steps = await Step.getAll()
+    res.json(steps)
+  } catch (err) {
+    next(err)
+  }
 })
 // router.get("/", async (req, res) => {
 //     res.json(await getAllUsers())

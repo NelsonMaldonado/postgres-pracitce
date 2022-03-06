@@ -15,6 +15,24 @@ exports.seed = function (knex) {
           picture: "salsacolombia",
           videos: "scapp",
         },
+        {
+          stepname: "Patacon Pisado",
+          website: "www.salsacolombia.net",
+          picture: "salsacolombia",
+          videos: "scapp",
+        },
+        {
+          stepname: "Latino",
+          website: "www.salsacolombia.net",
+          picture: "salsacolombia",
+          videos: "scapp",
+        },
+        {
+          stepname: "Jales",
+          website: "www.salsacolombia.net",
+          picture: "salsacolombia",
+          videos: "scapp",
+        },
       ])
     })
 }

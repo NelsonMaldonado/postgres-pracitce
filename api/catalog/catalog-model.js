@@ -5,6 +5,9 @@ const getAll = () => {
   return db("steps")
 }
 
-const getById = (id) => {}
+const getById = (id) => {
+  //select * from accounts where id = 1;
+  return db("steps").where("id", id).first()
+}
 
 module.exports = { getAll, getById }

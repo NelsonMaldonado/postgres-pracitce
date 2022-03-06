@@ -14,6 +14,16 @@ router.get("/", async (req, res, next) => {
     next(err)
   }
 })
+
+router.get("/:id", async (req, res, next) => {
+  console.log("getting all users")
+  try {
+    const steps = await Step.getById(req.params.id)
+    res.json(steps)
+  } catch (err) {
+    next(err)
+  }
+})
 // router.get("/", async (req, res) => {
 //     res.json(await getAllUsers())
 //   })

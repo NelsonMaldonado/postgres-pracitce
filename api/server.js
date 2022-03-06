@@ -24,14 +24,14 @@ server.use(express.json())
 server.use(helmet())
 server.use(cors())
 
-server.use("api/catalog", CatalogRouter)
+server.use("/api/catalog", CatalogRouter)
 
-server.get("/api/users", async (req, res) => {
-  res.json(await getAllUsers())
-})
+// server.get("/api/users", async (req, res) => {
+//   res.json(await getAllUsers())
+// })
 
-server.post("/api/users", async (req, res) => {
-  res.status(201).json(await insertUser(req.body))
-})
+// server.post("/api/users", async (req, res) => {
+//   res.status(201).json(await insertUser(req.body))
+// })
 
 module.exports = server
